@@ -1,0 +1,29 @@
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 21px 41px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+
+    &--yellow {
+        background: #FEDB3F;
+        color: #000;
+
+        &:hover {
+
+        }
+    }
+}
+
+.btn-reset {
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
