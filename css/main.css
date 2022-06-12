@@ -415,7 +415,7 @@ img {
 }
 
 .hero {
-  background: url(../../img/bg.jpg) top center/cover no-repeat;
+  background: url(../img/bg.jpg) top center/cover no-repeat;
   background-color: #1968B1;
   height: 100vh;
   min-height: 650px;
@@ -731,7 +731,7 @@ img {
 }
 
 .order-section {
-  background: url(../../img/cta.jpg) top center/cover no-repeat, #2B2B2B;
+  background: url(../img/cta.jpg) top center/cover no-repeat, #2B2B2B;
   color: #fff;
 }
 
@@ -851,6 +851,7 @@ img {
   position: fixed;
   top: 20%;
   right: 3%;
+  z-index: 100;
 }
 .fixed-menu__item {
   margin-bottom: 5px;

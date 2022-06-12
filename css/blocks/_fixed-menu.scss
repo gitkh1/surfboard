@@ -2,7 +2,7 @@
     position: fixed;
     top: 20%;
     right: 3%;
-    $z-fixed-menu;
+    z-index: $z-fixed-menu;
 
     &__item {
         margin-bottom: 5px;
