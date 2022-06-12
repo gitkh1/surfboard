@@ -614,7 +614,7 @@ img {
   display: none;
 }
 .benefits__item::before {
-  content: url("../../img/icons/separator.png");
+  content: url("../img/icons/separator.png");
   position: absolute;
   top: 64px;
   right: 0px;
