@@ -1,5 +1,8 @@
 .benefits {
-    display: flex;
+    
+    &__list {
+        display: flex;
+    }
 
     &__item {
         flex: 1;

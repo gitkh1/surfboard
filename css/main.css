@@ -417,8 +417,6 @@ img {
 .hero {
   background: url(../img/bg.jpg) top center/cover no-repeat;
   background-color: #1968B1;
-  height: 100vh;
-  min-height: 650px;
   color: #fff;
   padding: 24px 0px 60px 0px;
 }
@@ -592,7 +590,7 @@ img {
   padding: 0 27%;
 }
 
-.benefits {
+.benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -730,7 +728,7 @@ img {
      object-fit: cover;
 }
 
-.order-section {
+.order {
   background: url(../img/cta.jpg) top center/cover no-repeat, #2B2B2B;
   color: #fff;
 }
