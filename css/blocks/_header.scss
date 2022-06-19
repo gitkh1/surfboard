@@ -5,19 +5,42 @@
     color: #fff;
     font-weight: 700;
     white-space: nowrap;
+
+    @include tablets {
+        width: 100vw;
+        padding: rem(10px);
+        margin-left: rem(-10px);
+        background: #1968B1;
+    }
+
+    &__phone-number.header__phone-number {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &__img {
+        fill: #fff;
+        width: rem(56px);
+        height: rem(40px);
+    }
 }
 
 .menu {
+    @include tablets {
+        display: none;
+    }
+
     &__list {
         display: flex;
         align-items: center;
     }
 
     &__item {
-        margin-right: 22px;
+        margin-right: 0.5vw;
 
         &:last-child {
-            margin-right: 0px;
+            margin-right: rem(0px);
         }
     }
 
@@ -27,14 +50,19 @@
 }
 
 .phone-number {
-    font-size: 22px;
+    font-size: rem(22px);
     text-decoration: none;
     display: flex;
     align-items: center;
 
     &__icon {
-        width: 13px;
-        height: 14px;
-        margin-right: 6px;
+        width: rem(13px);
+        height: rem(14px);
+        margin-right: rem(6px);
+        fill: #292929;
+    }
+
+    &__icon--white {
+        fill: #fff;
     }
 }

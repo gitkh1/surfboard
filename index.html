@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <title>Surfboard</title>
 </head>
@@ -15,7 +15,9 @@
             <section class="section hero">
                 <div class="container hero__container">
                     <header class="header">
-                        <img src="./img/logo.png" alt="Logo">
+                        <svg class="header__img">
+                            <use xlink:href="./img/sprite.svg#logo"></use>
+                        </svg>
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
@@ -27,11 +29,16 @@
                                 <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
                             </ul>
                         </nav>
-                        <a href="tel:+78009039090" class="phone-number">
-                            <span class="phone-number__icon">
-                                <img src="img/icons/phone.png" class="phone-number__icon" alt="phone icon">
-                            </span>
+                        <a href="tel:+78009039090" class="phone-number header__phone-number">
+                            <svg class="phone-number__icon phone-number__icon--white">
+                                <use xlink:href="./img/sprite.svg#phone"></use>
+                            </svg>
                             <span class="phone-number__text">8 800 903 90 90</span>
+                        </a>
+                        <a href="" class="hamburger">
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
+                            <span class="hamburger__plank"></span>
                         </a>
                     </header>
                     <div class="hero__title-section">
@@ -42,21 +49,21 @@
                     <div class="hero__icons-section">
                         <ul class="features">
                             <li class="features__item feature">
-                                <div class="feature__icon">
-                                    <img src="./img/icons/design.png" alt="features icon">
-                                </div>
+                                <svg class="feature__icon">
+                                    <use xlink:href="./img/sprite.svg#design"></use>
+                                </svg>
                                 <div class="feature__text">Уникальный дизайн</div>
                             </li>
                             <li class="features__item feature">
-                                <div class="feature__icon">
-                                    <img src="./img/icons/matherials.png" alt="features icon">
-                                </div>
+                                <svg class="feature__icon">
+                                    <use xlink:href="./img/sprite.svg#matherials"></use>
+                                </svg>
                                 <div class="feature__text">Прочные материалы</div>
                             </li>
                             <li class="features__item feature">
-                                <div class="feature__icon">
-                                    <img src="./img/icons/shipping.png" alt="features icon">
-                                </div>
+                                <svg class="feature__icon">
+                                    <use xlink:href="./img/sprite.svg#shipping"></use>
+                                </svg>
                                 <div class="feature__text">Быстрая доставка</div>
                             </li>
                         </ul>
@@ -64,7 +71,7 @@
                 </div>
             </section>
             <section class="section benefits">
-                <div class="container">
+                <div class="container benefits__container">
                     <div class="headline">
                         <h2 class="section__title headline__title">Почему Surfboard?</h2>
                         <div class="headline__subtitle">
@@ -75,7 +82,9 @@
                         <li class="benefits__item benefit">
                             <div class="benefit__image">
                                 <div class="benefit__image-wrapper">
-                                    <img src="img/icons/perfectfit.png" alt="benefit icon" class="benefit__icon">
+                                    <svg class="benefit__icon">
+                                        <use xlink:href="./img/sprite.svg#perfectfit"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="benefit__text">
@@ -92,7 +101,9 @@
                         <li class="benefits__item benefit">
                             <div class="benefit__image">
                                 <div class="benefit__image-wrapper">
-                                    <img src="img/icons/strong.png" alt="benefit icon" class="benefit__icon">
+                                    <svg class="benefit__icon">
+                                        <use xlink:href="./img/sprite.svg#strong"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="benefit__text">
@@ -109,7 +120,9 @@
                         <li class="benefits__item benefit">
                             <div class="benefit__image">
                                 <div class="benefit__image-wrapper">
-                                    <img src="img/icons/unique.png" alt="benefit icon" class="benefit__icon">
+                                    <svg class="benefit__icon">
+                                        <use xlink:href="./img/sprite.svg#unique"></use>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="benefit__text">
@@ -242,7 +255,56 @@
                     </form>
                 </div>
             </section>
+            <section class="section map">
+                <div class="map__wrapper">
+                </div>
+            </section>
         </div>
+        <footer class="footer">
+            <div class="container footer__container">
+                <address class="footer__address address">
+                    <div class="footer__street address__street">Москва, ул.Новый Арбат, д.31/12</div>
+                    <a href="tel:+78009039090" class="phone-number footer__phone-number address__phone">
+                        <svg class="phone-number__icon">
+                            <use xlink:href="./img/sprite.svg#phone"></use>
+                        </svg>
+                        <span class="phone-number__text">8 800 903 90 90</span>
+                    </a>
+                </address>
+                <div class="social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#in"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#tw"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
     <nav class="fixed-menu">
         <ul class="fixed-menu__list">

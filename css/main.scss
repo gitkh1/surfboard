@@ -1,11 +1,17 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $grey: #F8FAF9;
 
 //z-indexes
 $z-fixed-menu: 100;
+
+@import "media";
 
 //normalize
 @import "normalize";
@@ -29,3 +35,7 @@ $z-fixed-menu: 100;
 @import "blocks/_form.scss";
 @import "blocks/_radio.scss";
 @import "blocks/_fixed-menu.scss";
+@import "blocks/_hamburger.scss";
+@import "blocks/_map.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_social.scss";

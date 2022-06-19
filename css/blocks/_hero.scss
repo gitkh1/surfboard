@@ -2,10 +2,33 @@
     background: url(../img/bg.jpg) top center / cover no-repeat;
     background-color: #1968B1;
     color: #fff;
-    padding: 24px 0px 60px 0px;
+    padding: rem(24px) rem(0px) rem(60px) rem(0px);
 
+    @include tablets {
+        background-position-x: right;
+        padding-top: 0;
+    }
+
+    &.section {
+        @include phones {
+            height: 100vh;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+    
     &__title-section {
         width: 46%;
+
+        @include tablets {
+            width: 100%;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__container {
@@ -16,14 +39,24 @@
     }
     
     &__main-title {
-        font-size: 48px;
+        font-size: rem(48px);
         text-transform: uppercase;
         font-weight: 700;
-        margin-bottom: 17px;
+        margin-bottom: rem(17px);
+
+        @include phones {
+            font-size: 9vw;
+        }
     }
 
     &__title-descr {
-        font-size: 21px;
-        margin-bottom: 39px;
+        font-size: rem(21px);
+        margin-bottom: rem(39px);
+    }
+
+    &__icons-section {
+        @include tablets {
+            display: none;
+        }
     }
 }

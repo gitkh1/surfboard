@@ -3,10 +3,10 @@
     align-items: center;
 
     &__item {
-        margin-right: 30px;
+        margin-right: rem(30px);
 
         &:last-child {
-            margin-right: 0px;
+            margin-right: rem(0px);
         }
     }
 }
@@ -14,13 +14,14 @@
 .feature {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: rem(16px);
 
     &__icon {
-        width: 35px;
-        margin-right: 14px;
+        fill: #fff;
+        width: rem(35px);
+        margin-right: rem(14px);
     }
     &__text {
-        max-width: 90px;
+        max-width: rem(90px);
     }
 }

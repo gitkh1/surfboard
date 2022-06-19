@@ -1,0 +1,21 @@
+.map {
+
+    @include tablets {
+        min-height: fit-content;
+        height: auto;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: rem(652px);
+        background: url(../img/map.jpg) center center / cover no-repeat;
+
+        @include tablets {
+            height: rem(526px);
+        }
+
+        @include phones {
+            height: rem(482px);
+        }
+    }
+}

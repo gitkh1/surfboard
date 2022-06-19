@@ -1,4 +1,9 @@
 .order {
     background: url(../img/cta.jpg) top center / cover no-repeat, #2B2B2B;
     color: #fff;
+
+    @include phones {
+        padding-top: rem(87px);
+        padding-bottom: rem(81px);
+    }
 }

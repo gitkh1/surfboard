@@ -1,0 +1,30 @@
+.social {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__item {
+        margin-right: rem(14px);
+    }
+
+    &__item:hover &__icon {
+        fill: #000;
+    }
+
+    &__item:last-child  {
+        margin-right: 0;
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__icon {
+        width: rem(20px);
+        height: rem(20px);
+        fill: #B3B3B3
+    }
+}
