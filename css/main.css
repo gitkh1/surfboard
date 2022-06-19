@@ -1194,6 +1194,11 @@ address {
 	border-radius: 2px;
 }
 
+.map {
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
 @media screen and (max-width: 768px) {
 	.map {
 		min-height: -webkit-fit-content;
