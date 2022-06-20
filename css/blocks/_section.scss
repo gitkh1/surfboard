@@ -1,20 +1,15 @@
 $lightBlack: #292929;
 
 .section {
-    height: 100vh;
-    min-height: rem(650px);
+    //height: min(100vh, rem(590px));
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: rem(30px) 0;
 
     @include tablets {
-        min-height: rem(1000px);
-        justify-content: space-between;
-    }
-
-    @include phones {
-        min-height: fit-content;
-        height: auto;
+        //height: min(100vh, rem(700px));
     }
 
     &__title {

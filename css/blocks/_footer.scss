@@ -1,5 +1,11 @@
 .footer {
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+
     &__container {
         padding-top: rem(17px);
         padding-bottom: rem(17px);

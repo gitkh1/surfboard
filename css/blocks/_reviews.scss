@@ -1,10 +1,5 @@
 .reviews {
 
-    @include phones {
-        padding-top: rem(96px);
-        padding-bottom: rem(82px);
-    }
-
     &__display {
         background: #F8FAF9;
         padding: rem(42px);

@@ -1,9 +1,4 @@
 .benefits {
-
-    @include phones {
-        padding-top: rem(50px);
-        padding-bottom: rem(50px);
-    }
     
     &__list {
         display: flex;

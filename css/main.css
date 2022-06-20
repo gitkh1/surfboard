@@ -383,7 +383,6 @@ body {
 }
 @media screen and (max-width: 768px) {
 	.container {
-		height: 100%;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -408,6 +407,7 @@ body {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	position: relative;
 }
 
 h1,
@@ -464,13 +464,19 @@ address {
 	background: url(../img/bg.jpg) top center/cover no-repeat;
 	background-color: #1968B1;
 	color: #fff;
-	padding: 1.3333333333rem 0rem 3.3333333333rem 0rem;
 }
 @media screen and (max-width: 768px) {
 	.hero {
 		background-position-x: right;
 		padding-top: 0;
 	}
+}
+.hero.section {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	padding: 1.3333333333rem 0rem 3.3333333333rem 0rem;
 }
 @media screen and (max-width: 480px) {
 	.hero.section {
@@ -515,7 +521,6 @@ address {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	height: 100%;
 }
 .hero__main-title {
 	font-size: 2.6666666667rem;
@@ -525,7 +530,7 @@ address {
 }
 @media screen and (max-width: 480px) {
 	.hero__main-title {
-		font-size: 9vw;
+		font-size: 1.6rem;
 	}
 }
 .hero__title-descr {
@@ -641,6 +646,7 @@ address {
 .feature__icon {
 	fill: #fff;
 	width: 1.9444444444rem;
+	height: 1.9444444444rem;
 	margin-right: 0.7777777778rem;
 }
 .feature__text {
@@ -672,8 +678,7 @@ address {
 }
 
 .section {
-	height: 100vh;
-	min-height: 36.1111111111rem;
+	min-height: 100vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -684,22 +689,7 @@ address {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-}
-@media screen and (max-width: 768px) {
-	.section {
-		min-height: 55.5555555556rem;
-		-webkit-box-pack: justify;
-		    -ms-flex-pack: justify;
-		        justify-content: space-between;
-	}
-}
-@media screen and (max-width: 480px) {
-	.section {
-		min-height: -webkit-fit-content;
-		min-height: -moz-fit-content;
-		min-height: fit-content;
-		height: auto;
-	}
+	padding: 1.6666666667rem 0;
 }
 .section__title {
 	font-size: 2.6666666667rem;
@@ -730,12 +720,6 @@ address {
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.benefits {
-		padding-top: 2.7777777778rem;
-		padding-bottom: 2.7777777778rem;
-	}
-}
 .benefits__list {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -840,12 +824,6 @@ address {
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.reviews {
-		padding-top: 5.3333333333rem;
-		padding-bottom: 4.5555555556rem;
-	}
-}
 .reviews__display {
 	background: #F8FAF9;
 	padding: 2.3333333333rem;
@@ -956,12 +934,6 @@ address {
 .order {
 	background: url(../img/cta.jpg) top center/cover no-repeat, #2B2B2B;
 	color: #fff;
-}
-@media screen and (max-width: 480px) {
-	.order {
-		padding-top: 4.8333333333rem;
-		padding-bottom: 4.5rem;
-	}
 }
 
 .form {
@@ -1123,7 +1095,7 @@ address {
 	border-radius: 0.2222222222rem;
 }
 .radio--checkbox .radio__visible::before {
-	background: url("../../img/icons/tick.png") no-repeat;
+	background: url("../img/icons/tick.png") no-repeat;
 }
 
 .fixed-menu {
@@ -1195,34 +1167,22 @@ address {
 }
 
 .map {
-	height: -webkit-fit-content;
-	height: -moz-fit-content;
-	height: fit-content;
-}
-@media screen and (max-width: 768px) {
-	.map {
-		min-height: -webkit-fit-content;
-		min-height: -moz-fit-content;
-		min-height: fit-content;
-		height: auto;
-	}
+	height: 100vh;
+	padding: 0;
 }
 .map__wrapper {
 	width: 100%;
-	height: 36.2222222222rem;
+	height: 100%;
 	background: url(../img/map.jpg) center center/cover no-repeat;
 }
-@media screen and (max-width: 768px) {
-	.map__wrapper {
-		height: 29.2222222222rem;
-	}
-}
-@media screen and (max-width: 480px) {
-	.map__wrapper {
-		height: 26.7777777778rem;
-	}
-}
 
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+}
 .footer__container {
 	padding-top: 0.9444444444rem;
 	padding-bottom: 0.9444444444rem;

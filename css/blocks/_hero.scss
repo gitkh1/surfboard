@@ -2,7 +2,6 @@
     background: url(../img/bg.jpg) top center / cover no-repeat;
     background-color: #1968B1;
     color: #fff;
-    padding: rem(24px) rem(0px) rem(60px) rem(0px);
 
     @include tablets {
         background-position-x: right;
@@ -10,6 +9,10 @@
     }
 
     &.section {
+        flex-direction: row;
+        padding: rem(24px) rem(0px) rem(60px) rem(0px);
+
+
         @include phones {
             height: 100vh;
             padding-bottom: 0;
@@ -35,7 +38,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
     }
     
     &__main-title {
@@ -45,7 +47,7 @@
         margin-bottom: rem(17px);
 
         @include phones {
-            font-size: 9vw;
+            font-size: 1.6rem;
         }
     }
 
