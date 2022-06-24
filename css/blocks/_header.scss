@@ -26,29 +26,6 @@
     }
 }
 
-.menu {
-    @include tablets {
-        display: none;
-    }
-
-    &__list {
-        display: flex;
-        align-items: center;
-    }
-
-    &__item {
-        margin-right: 0.5vw;
-
-        &:last-child {
-            margin-right: rem(0px);
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-    }
-}
-
 .phone-number {
     font-size: rem(22px);
     text-decoration: none;

@@ -1,6 +1,6 @@
 .hamburger {
     width: 24px;
-    height: 20px;
+    height: 24px;
     flex-direction: column;
     justify-content: space-between;
     display: none;
@@ -14,5 +14,13 @@
         background: #fff;
         height: 4px;
         border-radius: 2px;
+
+        &--close:first-child {
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        &--close:last-child {
+            transform: translateY(-10px) rotate(-45deg);
+        }
     }
 }

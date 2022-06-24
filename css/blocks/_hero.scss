@@ -1,5 +1,5 @@
 .hero {
-    background: url(../img/bg.jpg) top center / cover no-repeat;
+    background: url(../img/content/bg.jpg) top center / cover no-repeat;
     background-color: #1968B1;
     color: #fff;
 
@@ -13,7 +13,7 @@
         padding: rem(24px) rem(0px) rem(60px) rem(0px);
 
 
-        @include phones {
+        @include tablets {
             height: 100vh;
             padding-bottom: 0;
             padding-top: 0;
