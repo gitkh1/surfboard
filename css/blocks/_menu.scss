@@ -22,7 +22,9 @@
 }
 
 .mobile-menu {
-    
+
+    display: none;
+
     @include tablets {
         position: fixed;
         top: 0;
