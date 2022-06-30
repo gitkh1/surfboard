@@ -1,5 +1,6 @@
 .slider {
     background: $grey;
+    user-select: none;
 
     &__container {
         display: flex;
@@ -11,11 +12,18 @@
         }
     }
 
+    &__list {
+        display: flex;
+        overflow: hidden;
+    }
+
     &__slide {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
         padding: 0 0.5rem;
+        flex-basis: 100%;
+        flex-shrink: 0;
 
         @include tablets {
             flex-direction: column;

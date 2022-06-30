@@ -11,6 +11,7 @@ $grey: #F8FAF9;
 //z-indexes
 $z-fixed-menu: 100;
 $z-mobile-menu: 200;
+$z-overlay: 300;
 
 @import "media";
 
@@ -42,3 +43,5 @@ $z-mobile-menu: 200;
 @import "blocks/_map.scss";
 @import "blocks/_footer.scss";
 @import "blocks/_social.scss";
+@import "blocks/_team.scss";
+@import "blocks/_modal.scss";

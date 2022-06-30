@@ -153,7 +153,7 @@
                         </svg>
                     </div>
                     <ul class="slider__col slider__list">
-                        <li class="slider__slide slide">
+                        <li class="slider__slide slide slide--active">
                             <div class="slide__image">
                                 <svg class="slide__image-background">
                                     <use xlink:href="./img/icons/sprite.svg#product-background"></use>
@@ -189,7 +189,8 @@
                                             <div class="dropdown-block__row">
                                                 <div class="dropdown-block__param">
                                                     <svg class="dropdown-block__param-img">
-                                                        <use xlink:href="./img/icons/sprite.svg#product-thickness"></use>
+                                                        <use xlink:href="./img/icons/sprite.svg#product-thickness">
+                                                        </use>
                                                     </svg>
                                                     Толщина
                                                 </div>
@@ -245,6 +246,100 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="slider__slide slide">
+                            <div class="slide__image">
+                                <svg class="slide__image-background">
+                                    <use xlink:href="./img/icons/sprite.svg#product-background"></use>
+                                </svg>
+                                <img src="./img/content/shortboard.png" alt="shortboard" class="slide__image-item">
+                            </div>
+                            <div class="slide__text product">
+                                <div class="slide__row">
+                                    <div class="product__dropdown-element">
+                                        <svg class="product__dropdown-icon">
+                                            <use xlink:href="./img/icons/sprite.svg#product-dropdown-icon"></use>
+                                        </svg>
+                                        <div class="product__dropdown-name">Параметры</div>
+                                        <div class="product__dropdown-block dropdown-block">
+                                            <div class="dropdown-block__row">
+                                                <div class="dropdown-block__param">
+                                                    <svg class="dropdown-block__param-img">
+                                                        <use xlink:href="./img/icons/sprite.svg#product-length"></use>
+                                                    </svg>
+                                                    Длина доски
+                                                </div>
+                                                <div class="dropdown-block__param-value">от 1,5 м</div>
+                                            </div>
+                                            <div class="dropdown-block__row">
+                                                <div class="dropdown-block__param">
+                                                    <svg class="dropdown-block__param-img">
+                                                        <use xlink:href="./img/icons/sprite.svg#product-width"></use>
+                                                    </svg>
+                                                    Ширина доски
+                                                </div>
+                                                <div class="dropdown-block__param-value">от 30 см</div>
+                                            </div>
+                                            <div class="dropdown-block__row">
+                                                <div class="dropdown-block__param">
+                                                    <svg class="dropdown-block__param-img">
+                                                        <use xlink:href="./img/icons/sprite.svg#product-thickness">
+                                                        </use>
+                                                    </svg>
+                                                    Толщина
+                                                </div>
+                                                <div class="dropdown-block__param-value">8 см</div>
+                                            </div>
+                                            <div class="dropdown-block__row">
+                                                <div class="dropdown-block__param">
+                                                    <svg class="dropdown-block__param-img">
+                                                        <use xlink:href="./img/icons/sprite.svg#product-lifetime"></use>
+                                                    </svg>
+                                                    Срок службы
+                                                </div>
+                                                <div class="dropdown-block__param-value">5 лет</div>
+                                            </div>
+                                            <div class="dropdown-block__row">
+                                                <div class="dropdown-block__param">
+                                                    <svg class="dropdown-block__param-img">
+                                                        <use xlink:href="./img/icons/sprite.svg#product-weight"></use>
+                                                    </svg>
+                                                    Вес
+                                                </div>
+                                                <div class="dropdown-block__param-value">7-8 кг</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide__row product__title">
+                                    Шортборд
+                                </div>
+                                <div class="slide__row product__descr">
+                                    Самые быстрые доски для профессионалов. Размеры шортбордов позволяют быстро набирать
+                                    скорость, делать различные трюки на волне, включая резкие повороты и развороты,
+                                    флоатеры (проезды по самому гребню волны), различные прыжки с вращениями или без, а
+                                    также катание
+                                    в трубах.
+                                </div>
+                                <div class="slide__row">
+                                    <div class="slide__col">
+                                        <div class="product__param">Длина доски</div>
+                                        <div class="product__param product__param--value">от 1,5 метров</div>
+                                    </div>
+                                    <div class="slide__col">
+                                        <div class="product__param">Ширина доски</div>
+                                        <div class="product__param product__param--value">от 30 сантиметров</div>
+                                    </div>
+                                </div>
+                                <div class="slide__row">
+                                    <div class="slide__col">
+                                        <div class="product__price">12000</div>
+                                    </div>
+                                    <div class="slide__col">
+                                        <a href="#" class="slide__button btn btn--yellow">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                     <div class="slider__col slider-controls">
                         <svg class="slider-control slider-control--right" id="slider-control-right">
@@ -253,12 +348,60 @@
                     </div>
                 </div>
             </section>
+            <section class="section team">
+                <div class="container team__container">
+                    <h2 class="section__title">Команда</h2>
+                    <ul class="team__list">
+                        <li class="team__item">
+                            <div class="team__photo">
+                                <img src="img/content/boris.jpg" width="220" height="290" alt="boris" class="team__img">
+                            </div>
+                            <a href="#" class="team__name">Борис Федорович</a>
+                            <div class="team__content">
+                                <div class="team__profession">Главный технолог</div>
+                                <div class="team__text">Отвечает за материалы и разработку досок</div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__photo">
+                                <img src="img/content/olga.jpg" width="220" height="290" alt="olga" class="team__img">
+                            </div>
+                            <a href="#" class="team__name">Ольга Невзорова</a>
+                            <div class="team__content">
+                                <div class="team__profession">Дизайнер</div>
+                                <div class="team__text">Создает дизайн серфбордов</div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__photo team__photo--active">
+                                <img src="img/content/ingvar.jpg" width="220" height="290" alt="ingvar" class="team__img">
+                            </div>
+                            <a href="#" class="team__name team__name--active">Ингвар Нильсон</a>
+                            <div class="team__content team__content--active">
+                                <div class="team__profession">Спортсмен</div>
+                                <div class="team__text">Участвует в разработке серфбордов</div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__photo">
+                                <img src="img/content/ekaterina.jpg" width="220" height="290" alt="ekaterina" class="tea
+                                m__img">
+                            </div>
+                            <a href="#" class="team__name">Екатерина Иванова</a>
+                            <div class="team__content">
+                                <div class="team__profession">Тестировщик</div>
+                                <div class="team__text">Отвечает за разработку новых продуктов</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <section class="section reviews">
                 <div class="container">
                     <h2 class="section__title">Отзывы</h2>
                     <div class="reviews__container">
-                        <div class="reviews__display">
-                            <div class="reviews__display-inner">
+                        <ul class="reviews__display">
+                            <li class="reviews__display-inner reviews__display-inner--active">
                                 <div class="reviews__avatar">
                                     <img src="img/content/avatar1-big.jpg" alt="avatar" class="reviews__avatar-img">
                                 </div>
@@ -274,8 +417,42 @@
                                     </div>
                                     <div class="reviews__author">Ольга Макарова</div>
                                 </article>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="reviews__display-inner">
+                                <div class="reviews__avatar">
+                                    <img src="img/content/avatar2-big.jpg" alt="avatar" class="reviews__avatar-img">
+                                </div>
+                                <article class="reviews__content">
+                                    <div class="reviews__title">Нереальная скорость</div>
+                                    <div class="reviews__text">
+                                        <p>
+                                            Я занимаюсь профессиональным спортом. Доверил изготовление доски для
+                                            соревнований ребятам из Surfboard и не пожалел: 1 место на соревнованиях.
+                                            Нереальная скорость, устойчивая, удобная и легкая: всё что нужно для победы
+                                            на соревнованиях!
+                                        </p>
+                                    </div>
+                                    <div class="reviews__author">Марк Брюлов</div>
+                                </article>
+                            </li>
+                            <li class="reviews__display-inner">
+                                <div class="reviews__avatar">
+                                    <img src="img/content/avatar3-big.jpg" alt="avatar" class="reviews__avatar-img">
+                                </div>
+                                <article class="reviews__content">
+                                    <div class="reviews__title">Устойчивость и безопасность</div>
+                                    <div class="reviews__text">
+                                        <p>
+                                            Я заказывал доски для своих детей. Мне было важно, чтобы они были
+                                            устойчивые, так как безопасность детей на первом месте. Доски были
+                                            изготовлены по индивидуальным замерам с учетом роста и веса каждого ребенка.
+                                            Теперь дети катаются и им нравится!
+                                        </p>
+                                    </div>
+                                    <div class="reviews__author">Василий Поперечный</div>
+                                </article>
+                            </li>
+                        </ul>
                         <ul class="reviews__switcher">
                             <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
                                 <a href="#" class="interactive-avatar__link">
@@ -304,35 +481,37 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name" required>
+                                    <div class="form__validity"></div>
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="phone" required>
+                                    <div class="form__validity"></div>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Улица</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="address[]">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Дом</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="address[]">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="address[]">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Квартира</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="address[]">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Этаж</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="address[]">
                                 </label>
                             </div>
                         </div>
@@ -340,7 +519,9 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea class="form__input form__input--textarea" name="comment" required></textarea>
+                                    <div class="form__validity"></div>
+                                    <!--Поле textarea required, иначе сервер не хочет принимать данные-->
                                 </label>
                             </div>
                             <div class="form__controls">
@@ -357,13 +538,13 @@
                             </div>
                             <div class="form__controls">
                                 <label class="radio radio--checkbox">
-                                    <input type="checkbox" class="radio__elem">
+                                    <input type="checkbox" class="radio__elem" name="callback">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">Не перезванивать</div>
                                 </label>
                             </div>
                             <div class="form__btns">
-                                <input type="button" value="Заказать" class="form__btn btn btn--yellow">
+                                <input type="button" value="Заказать" class="form__btn btn btn--yellow submit">
                                 <input type="reset" value="Очистить" class="form__btn btn-reset">
                             </div>
                         </div>
@@ -450,6 +631,12 @@
             <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Контакты</a></li>
         </ul>
     </nav>
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="modal__text">&nbsp;</div>
+        <div class="modal__button btn btn--yellow">Закрыть</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
