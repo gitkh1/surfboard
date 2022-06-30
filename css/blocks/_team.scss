@@ -4,7 +4,7 @@
         justify-content: flex-start;//--
 
         @include phones {
-        min-height: rem(540px);
+        min-height: rem(600px);//--
         }
     }
 
