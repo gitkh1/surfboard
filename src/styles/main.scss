@@ -1,0 +1,23 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//colors
+$grey: #F8FAF9;
+$lightBlack: #292929;
+
+//z-indexes
+$z-fixed-menu: 100;
+$z-mobile-menu: 200;
+$z-overlay: 300;
+
+@import "media";
+
+//setups
+@import "layout";
+
+//components
+@import "blocks/*.scss";
