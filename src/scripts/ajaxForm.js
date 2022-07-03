@@ -4,7 +4,7 @@ const $sendButton = $('.submit');
 function validateField(field) {
     field.nextElementSibling.textContent = field.validationMessage;
     return field.checkValidity();
-}
+};
 function validateForm(form) {
     let valid = true;
     if (!validateField($('input[name=name]', form).get(0))) {
@@ -31,7 +31,7 @@ $sendButton.on('click', function (e) {
             //pay: $('input[name=option]:checked').siblings('.radio__title').html(),
             //callback: $('input[name=callback]:checked').siblings('.radio__title').html()
             to: "mail@mail.ru" //на ленинге нет поля с email, хотя сервер ждет его
-        }
+        };
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');

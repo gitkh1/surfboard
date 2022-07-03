@@ -1,6 +1,6 @@
 //modal
 const $overlay = $('.overlay');
-const $modal = $('.modal')
+const $modal = $('.modal');
 function openModal(status) {
     $overlay.fadeIn(300);
     $modal.fadeIn(300, function () {
@@ -8,7 +8,7 @@ function openModal(status) {
             $('.modal__text').html('Отправка удалась');
         } else {
             $('.modal__text').html('Произошла ошибка');
-        }
+        };
     });
     $('body').addClass('lock');
 };

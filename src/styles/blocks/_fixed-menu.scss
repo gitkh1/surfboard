@@ -17,7 +17,8 @@
 
         &--active {
             .fixed-menu__link {
-                border-color: #fff;
+                border-color: #ccc;
+                transition: all 0.4s;
             }
         }
     }
@@ -29,6 +30,7 @@
         border-radius: 50%;
         border: rem(1px) solid transparent;
         position: relative;
+        transition: all 0.4s;
 
         &::before {
             content: '';
@@ -37,7 +39,7 @@
             width: rem(6px);
             height: rem(6px);
             border-radius: 50%;
-            background: #fff;
+            background: #ccc;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);

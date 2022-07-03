@@ -10887,7 +10887,7 @@ const $sendButton = $('.submit');
 function validateField(field) {
     field.nextElementSibling.textContent = field.validationMessage;
     return field.checkValidity();
-}
+};
 function validateForm(form) {
     let valid = true;
     if (!validateField($('input[name=name]', form).get(0))) {
@@ -10914,7 +10914,7 @@ $sendButton.on('click', function (e) {
             //pay: $('input[name=option]:checked').siblings('.radio__title').html(),
             //callback: $('input[name=callback]:checked').siblings('.radio__title').html()
             to: "mail@mail.ru" //на ленинге нет поля с email, хотя сервер ждет его
-        }
+        };
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
@@ -10940,7 +10940,7 @@ $closeMenuButton.on('click', e => {
 });
 //modal
 const $overlay = $('.overlay');
-const $modal = $('.modal')
+const $modal = $('.modal');
 function openModal(status) {
     $overlay.fadeIn(300);
     $modal.fadeIn(300, function () {
@@ -10948,7 +10948,7 @@ function openModal(status) {
             $('.modal__text').html('Отправка удалась');
         } else {
             $('.modal__text').html('Произошла ошибка');
-        }
+        };
     });
     $('body').addClass('lock');
 };
@@ -10957,6 +10957,52 @@ function closeModal() {
     $modal.fadeOut(300, () => $('.modal__text').html('&nbsp;'));
 };
 $('.overlay, .modal').on('click', closeModal);
+//one page scroll paginator
+const $paginatorList = $('.fixed-menu__list');
+const $paginatorItemClassActive = 'fixed-menu__item--active';
+const $sections = $('.section');
+const sections = document.querySelectorAll('.section');
+
+
+//change paginator classes
+const changeClass = (ndx) => {
+    $paginatorList.children().removeClass($paginatorItemClassActive);
+    $paginatorList.children().eq(ndx).addClass($paginatorItemClassActive);
+};
+
+
+//create elements in paginator
+for (let i = $paginatorList.children().length; i < sections.length; i++) {
+    const $paginatorListFirst = $paginatorList.children().first().clone();
+    $paginatorList.append($paginatorListFirst);
+};
+
+
+//init observer
+const options = {
+    threshold: 0.5
+};
+const callback = (entries) => {
+    entries.forEach( (entry) => {
+        if (entry.isIntersecting) {
+            const ndx = $sections.index($(entry.target));
+            changeClass(ndx);
+        };
+    });
+};
+const observer = new IntersectionObserver(callback, options);
+
+sections.forEach((section) => {
+    observer.observe(section);
+});
+
+//paginator clickabe items
+$paginatorList.children().on('click', function (event) {
+    event.preventDefault();
+    const clickTargetLiIndex = $paginatorList.children().index($(this));
+    const elemToScroll = $sections[clickTargetLiIndex]
+    elemToScroll.scrollIntoView({behavior: "smooth", block: "start"});
+});
 //slider__products
 const $sliderControlLeft = $('#slider-control-left');
 const $sliderControlRight = $('#slider-control-right');
@@ -10982,13 +11028,13 @@ function closeElement(elem) {
     elem.removeClass('team__name--active');
     elem.siblings('.team__content').removeClass('team__content--active');
     elem.siblings('.team__photo').removeClass('team__photo--active');
-}
+};
 function openElement(elem) {
     closeElement($('.team__item .team__name').not(elem));
     elem.addClass('team__name--active');
     elem.siblings('.team__content').addClass('team__content--active');
     elem.siblings('.team__photo').addClass('team__photo--active');
-}
+};
 $('.team__name').on('click', function (event) {
     event.preventDefault();
     const $clickTarget = $(this);

@@ -1,10 +1,11 @@
 .section {
-    //height: min(100vh, rem(590px));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
     padding: rem(30px) 0;
+    scroll-snap-align: start;
 
     @include tablets {
         //height: min(100vh, rem(700px));

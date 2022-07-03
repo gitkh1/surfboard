@@ -23,7 +23,6 @@ body {
 }
 
 .wrapper {
-    position: relative;
     width: 100%;
     min-height: 100%;
     overflow: hidden;
@@ -46,7 +45,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .lock {
