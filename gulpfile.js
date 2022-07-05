@@ -113,4 +113,4 @@ task('watch', () => {
 });
 
 task('default', series(parallel('copy:html', 'copy:img-content', 'copy:video', 'styles', 'copy:jsLibs', 'scripts'), parallel('server', 'watch')));
-task('build', series('clean', parallel('copy:html', 'copy:img-content', 'copy:video', 'styles', 'copy:jsLibs', 'scripts', 'icons')));
+task('prod', series('clean', parallel('copy:html', 'copy:img-content', 'copy:video', 'styles', 'copy:jsLibs', 'scripts', 'icons')));
