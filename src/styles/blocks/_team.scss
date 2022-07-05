@@ -40,13 +40,13 @@
         @include tablets {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s;
+            transition: max-height 0.4s;
         }
 
         &--active {
             @include tablets {
                 max-height: rem(400px);
-                transition: max-height 0.3s;
+                transition: max-height 0.4s;
             }
         }
     }
@@ -72,7 +72,7 @@
             font-size: rem(9px);
             margin-left: rem(4px);
             display: inline-block;
-            transition: transform 0.3s;
+            transition: transform 0.4s;
         }
 
         &--active {
@@ -93,11 +93,11 @@
     &__content {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s;
+        transition: max-height 0.4s;
 
         &--active {
             max-height: rem(100px);
-            transition: max-height 0.3s;
+            transition: max-height 0.4s;
         }
     }
 }
