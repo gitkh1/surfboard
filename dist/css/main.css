@@ -775,8 +775,7 @@ address {
     padding: 0; }
   .map__wrapper {
     width: 100%;
-    height: 100%;
-    background: url(../img/content/map.jpg) center center/cover no-repeat; }
+    height: 100%; }
 
 @media screen and (max-width: 768px) {
   .top-menu {
@@ -861,6 +860,204 @@ address {
 .order {
   background: url(../img/content/cta.jpg) top center/cover no-repeat, #2B2B2B;
   color: #fff; }
+
+.player__container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.player__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.player .player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../img/content/splashscreen.jpg") center center/cover no-repeat;
+  cursor: pointer; }
+  .player .player__splash:before {
+    content: url("../../img/content/play-big.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.player__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .player__wrapper.active .player__splash {
+    display: none; }
+
+.player__video {
+  height: 21.77778rem;
+  width: 36.77778rem; }
+  @media screen and (max-width: 768px) {
+    .player__video {
+      height: auto;
+      width: 100%; } }
+
+.player__controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.94444rem;
+  background: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.88889rem; }
+
+.player__start {
+  width: 0.77778rem;
+  height: 0;
+  border: 0.44444rem solid transparent;
+  border-left-color: #fff;
+  border-right-width: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
+  position: relative;
+  cursor: pointer; }
+  .player__start.paused {
+    width: 0.77778rem;
+    height: 0.88889rem;
+    border: none; }
+    .player__start.paused:after, .player__start.paused:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0.27778rem;
+      top: 0;
+      bottom: 0;
+      background: #fff; }
+    .player__start.paused:after {
+      right: 0; }
+    .player__start.paused:before {
+      left: 0; }
+
+.player__playback {
+  height: 100%;
+  position: relative;
+  flex: 1;
+  margin: 0 1.94444rem;
+  cursor: pointer; }
+  .player__playback-before {
+    height: 0.22222rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    background: yellow;
+    display: block;
+    transform: translateY(-50%); }
+  .player__playback-after {
+    height: 0.22222rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    background: #626262;
+    display: block;
+    transform: translateY(-50%); }
+  .player__playback-button {
+    background: yellow;
+    border-radius: 50%;
+    border: none;
+    width: 0.66667rem;
+    height: 0.66667rem;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 0;
+    z-index: 1; }
+
+.player__duration {
+  color: #fff;
+  font-weight: bold; }
+
+.volume {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+  height: 100%; }
+  .volume__speaker {
+    width: 0.61111rem;
+    height: 1.11111rem;
+    position: relative;
+    cursor: pointer; }
+    .volume__speaker::before {
+      content: '';
+      background: #fff;
+      border-radius: 50%;
+      border: none;
+      width: 0.33333rem;
+      height: 0.33333rem;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .volume__speaker::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 0.44444rem solid transparent;
+      border-right-color: #fff;
+      border-left-width: 0;
+      padding: 0;
+      background: transparent;
+      outline: none;
+      position: absolute;
+      left: 0.05556rem;
+      top: 50%;
+      transform: translateY(-50%); }
+    .volume__speaker--active::before {
+      background: yellow; }
+    .volume__speaker--active::after {
+      border-right-color: yellow; }
+  .volume__scale {
+    width: 3.33333rem;
+    position: relative;
+    cursor: pointer; }
+    .volume__scale-before {
+      height: 0.22222rem;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      background: yellow;
+      display: block;
+      transform: translateY(-50%); }
+    .volume__scale-after {
+      height: 0.22222rem;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 100%;
+      background: #626262;
+      display: block;
+      transform: translateY(-50%); }
+    .volume__scale-button {
+      background: yellow;
+      border-radius: 50%;
+      border: none;
+      width: 0.66667rem;
+      height: 0.66667rem;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 0;
+      z-index: 1; }
 
 .radio {
   display: flex;

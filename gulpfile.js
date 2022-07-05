@@ -29,13 +29,26 @@ task('copy:html', () => {
     return src(`${SRC_PATH}/*.html`)
         .pipe(dest(DIST_PATH))
         .pipe(reload({ stream: true }));
-})
+});
 
 task('copy:img-content', () => {
-    return src([`${SRC_PATH}/img/content/*.jpg`,`${SRC_PATH}/img/content/*.jpeg`,`${SRC_PATH}/img/content/*.png`])
+    return src([`${SRC_PATH}/img/content/*.jpg`,`${SRC_PATH}/img/content/*.jpeg`,`${SRC_PATH}/img/content/*.png`, `${SRC_PATH}/img/content/*.svg`])
         .pipe(dest(`${DIST_PATH}/img/content`))
         .pipe(reload({ stream: true }));
-})
+});
+
+task('copy:video', () => {
+    return src([`${SRC_PATH}/video/**/*.*`])
+        .pipe(dest(`${DIST_PATH}/video`))
+        .pipe(reload({ stream: true }));
+});
+
+
+task('copy:jsLibs', () => {
+    return src([...JS_LIBS])
+        .pipe(dest(`${DIST_PATH}/js`))
+        .pipe(reload({ stream: true }));
+});
 
 task('styles', () => {
     return src([...STYLE_LIBS,'src/styles/main.scss'])
@@ -49,15 +62,8 @@ task('styles', () => {
         .pipe(reload({ stream: true }));
 });
 
-const scripts = [
-    ...JS_LIBS,
-    'src/scripts/document.ready/before.js',
-    'src/scripts/*.js',
-    'src/scripts/document.ready/after.js'
-];
-
 task('scripts', () => {
-    return src(scripts)
+    return src('src/scripts/**/*.js')
         .pipe(concat('script.js'))
         .pipe(gulpif(env === 'prod', babel({ presets: ['@babel/env'] })))
         .pipe(gulpif(env === 'prod', uglify()))
@@ -106,5 +112,5 @@ task('watch', () => {
     watch('./src/images/icons/*.svg', series('icons'));
 });
 
-task('default', series(parallel('copy:html', 'copy:img-content', 'styles', 'scripts'), parallel('server', 'watch')));
-task('build', series('clean', parallel('copy:html', 'copy:img-content', 'styles', 'scripts', 'icons')));
+task('default', series(parallel('copy:html', 'copy:img-content', 'copy:video', 'styles', 'copy:jsLibs', 'scripts'), parallel('server', 'watch')));
+task('build', series('clean', parallel('copy:html', 'copy:img-content', 'styles', 'copy:jsLibs', 'scripts', 'icons')));
