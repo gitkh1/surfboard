@@ -89,11 +89,12 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        flex-shrink: 0;
         position: relative;
         cursor: pointer;
 
         @include phones {
-            padding: rem(18px) rem(5px);
+            padding: rem(40px) rem(5px);
         }
 
         &--long {
