@@ -62,8 +62,14 @@ task('styles', () => {
         .pipe(reload({ stream: true }));
 });
 
+const scripts = [
+    'src/scripts/document.ready/before.js',
+    'src/scripts/*.js',
+    'src/scripts/document.ready/after.js'
+];
+
 task('scripts', () => {
-    return src('src/scripts/**/*.js')
+    return src(scripts)
         .pipe(concat('script.js'))
         .pipe(gulpif(env === 'prod', babel({ presets: ['@babel/env'] })))
         .pipe(gulpif(env === 'prod', uglify()))
