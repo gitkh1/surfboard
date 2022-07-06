@@ -7,12 +7,10 @@
 
     &__item {
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-flex;
     }
 
-    .player__splash {
+    &__splash {
         position: absolute;
         top: 0;
         left: 0;
@@ -34,20 +32,10 @@
         }
     }
 
-    &__wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &.active .player__splash {
-            display: none;
-        }
-    }
-
     &__video {
         height: rem(392px);
         width: rem(662px);
-        
+
         @include tablets {
             height: auto;
             width: 100%;
@@ -65,6 +53,7 @@
         align-items: center;
         justify-content: space-between;
         padding: rem(9px) rem(16px);
+        z-index: 10;
     }
 
     &__start {
@@ -107,9 +96,11 @@
 
     &__playback {
         height: 100%;
-        position: relative;
         flex: 1;
         margin: 0 rem(35px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
 
         &-before {
@@ -153,6 +144,68 @@
         color: #fff;
         font-weight: bold;
     }
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        height: rem(4px);
+        background: #626262;
+        background-image: linear-gradient(yellow, yellow);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        cursor: pointer;
+
+        &[data-type="volume"] {
+            background-size: 100% 100%;
+        }
+
+        /* Input Thumb */
+        @mixin inputRangeThumb {
+            -webkit-appearance: none;
+            width: rem(12px);
+            height: rem(12px);
+            border-radius: 50%;
+            background: yellow;
+            cursor: ew-resize;
+            transition: background .3s ease-in-out;
+            
+            &:hover {
+                background: yellow;
+            }
+        }
+
+        &::-webkit-slider-thumb {
+            @include inputRangeThumb;
+        }
+
+        &::-moz-range-thumb {
+            @include inputRangeThumb;
+        }
+
+        &::-ms-thumb {
+            @include inputRangeThumb;
+        }
+
+        /* Input Track */
+        @mixin inputRangeTrack {
+            -webkit-appearance: none;
+            box-shadow: none;
+            border: none;
+            background: transparent;
+        }
+
+        &::-webkit-slider-runnable-track {
+            @include inputRangeTrack;
+        }
+
+        &::-moz-range-track {
+            @include inputRangeTrack;
+        }
+
+        &::-ms-track {
+            @include inputRangeTrack;
+        }
+    }
 }
 
 .volume {
@@ -165,6 +218,7 @@
     &__speaker {
         width: rem(11px);
         height: rem(20px);
+        margin-right: rem(20px);
         position: relative;
         cursor: pointer;
 
@@ -203,13 +257,14 @@
             &::before {
                 background: yellow;
             }
+
             &::after {
                 border-right-color: yellow;
             }
         }
     }
 
-    &__scale {
+    /**&__scale {
         width: rem(60px);
         position: relative;
         cursor: pointer;
@@ -249,5 +304,11 @@
             left: 0;
             z-index: 1;
         }
+    }**/
+
+    &__scale {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

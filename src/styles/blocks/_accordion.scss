@@ -95,6 +95,7 @@
 
         @include phones {
             padding: rem(40px) rem(5px);
+            min-width: rem(59px);//fix ios bug
         }
 
         &--long {

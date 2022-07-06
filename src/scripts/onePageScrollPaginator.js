@@ -42,7 +42,7 @@ $(document).ready(function () {
     $paginatorList.children().on('click', function (event) {
         event.preventDefault();
         const clickTargetLiIndex = $paginatorList.children().index($(this));
-        const elemToScroll = $sections[clickTargetLiIndex]
+        const elemToScroll = $sections[clickTargetLiIndex];
         elemToScroll.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });

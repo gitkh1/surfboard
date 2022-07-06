@@ -7,7 +7,7 @@ $(document).ready(function () {
     $sliderControlRight.on('click', (e) => {
         e.preventDefault();
         const $first = $sliderList.children().first();
-        $first.animate({ 'margin-left': `-` + $sliderWidth + `px` }, 300, () => {
+        $first.animate({ 'margin-left': `-` + $sliderWidth + `px` }, 400, () => {
             $sliderList.append($first);
             $first.css({ 'margin-left': 0 });
         });
@@ -17,6 +17,6 @@ $(document).ready(function () {
         const $last = $sliderList.children().last();
         $sliderList.prepend($last);
         $last.css({ 'margin-left': `-` + $sliderWidth + `px` });
-        $last.animate({ 'margin-left': 0 }, 300);
+        $last.animate({ 'margin-left': 0 }, 400);
     });
 });

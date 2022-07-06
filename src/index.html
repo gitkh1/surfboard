@@ -536,28 +536,30 @@
                     <h2 class="section__title">Как мы работаем</h2>
                     <div class="player__container">
                         <div class="player__item">
-                            <div class="player__wrapper">
-                                <video preload="auto" playsinline="" class="player__video">
-                                    <source src="./video/video.mp4" type="video/mp4">
-                                    <source src="./video/video.webm" type="video/webm">
-                                    <source src="./video/video.ogv" type="video/ogv">
-                                </video>
-                                <div class="player__splash"></div>
-                            </div>
+                            <video preload="auto" playsinline class="player__video">
+                                <source src="./video/video.mp4" type="video/mp4">
+                                <source src="./video/video.webm" type="video/webm">
+                                <source src="./video/video.ogv" type="video/ogv">
+                            </video>
+                            <div class="player__splash"></div>
                             <div class="player__controls">
                                 <button class="player__start"></button>
                                 <div class="player__playback">
-                                    <div class="player__playback-before"></div>
+                                    <!--<div class="player__playback-before"></div>
                                     <button class="player__playback-button"></button>
-                                    <div class="player__playback-after"></div>
+                                    <div class="player__playback-after"></div>-->
+                                    <input type="range" step="1" min="0" max="100" value="0" />
                                 </div>
                                 <div class="player__volume volume">
                                     <div class="volume__speaker volume__speaker--active">
                                     </div>
-                                    <div class="volume__scale">
+                                    <!--<div class="volume__scale">
                                         <div class="volume__scale-before"></div>
                                         <button class="volume__scale-button"></button>
                                         <div class="volume__scale-after"></div>
+                                    </div>-->
+                                    <div class="volume__scale">
+                                        <input type="range" step="0.1" min="0" max="1" value="1" data-type="volume" />
                                     </div>
                                 </div>
                             </div>
@@ -705,20 +707,22 @@
         </ul>
     </nav>
     <nav class="menu mobile-menu">
-        <a href="#" class="mobile-menu__close hamburger hamburger--close" id="mobile-menu-close">
-            <span class="hamburger__plank hamburger__plank--close"></span>
-            <span class="hamburger__plank hamburger__plank--close"></span>
-        </a>
-        <ul class="menu__list mobile-menu__list">
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">О нас</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Серфборды</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Команда</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Меню</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Отзывы</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Как мы
-                    работаем</a></li>
-            <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Контакты</a></li>
-        </ul>
+        <div class="mobile-menu__inner">
+            <a href="#" class="mobile-menu__close hamburger hamburger--close" id="mobile-menu-close">
+                <span class="hamburger__plank hamburger__plank--close"></span>
+                <span class="hamburger__plank hamburger__plank--close"></span>
+            </a>
+            <ul class="menu__list mobile-menu__list">
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">О нас</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Серфборды</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Команда</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Меню</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Отзывы</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Как мы
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Заказать</a></li>
+                <li class="menu__item mobile-menu__item"><a href="#" class="menu__link mobile-menu__link">Контакты</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="overlay"></div>
     <div class="modal">
