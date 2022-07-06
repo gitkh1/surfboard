@@ -62,8 +62,8 @@ const performTransition = (sectionEq) => {
 //viewport scroller
 const viewportScroller = () => {
     const activeSection = $sections.filter('.active');
-    const nextSection = activeSection.next();
-    const prevSection = activeSection.prev();
+    const nextSection = activeSection.next('section');
+    const prevSection = activeSection.prev('section');
 
     return {
         next() {
