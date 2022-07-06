@@ -5,11 +5,6 @@
     justify-content: center;
     flex-shrink: 0;
     padding: rem(30px) 0;
-    scroll-snap-align: start;
-
-    @include tablets {
-        //height: min(100vh, rem(700px));
-    }
 
     &__title {
         font-size: rem(48px);

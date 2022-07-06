@@ -45,9 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
+    transition: transform 1s;
 }
 
 .lock {

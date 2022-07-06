@@ -14,11 +14,6 @@ $closeMenuButton.on('click', e => {
 $mobileMenuList.children().on('click', function (e) {
     e.preventDefault();
     const clickTargetLiIndex = $mobileMenuList.children().index($(this));
-    const elemToScroll = $('.section')[clickTargetLiIndex + 1];
-    const scrollTo = function () {
-        $('.maincontent').animate({
-            scrollTop: $(elemToScroll).offset().top
-        }, 400);
-    };
-    $mobileMenu.fadeOut(400, scrollTo());
+    const sectionOrderIndex = clickTargetLiIndex + 1;
+    $mobileMenu.fadeOut(400, performTransition(sectionOrderIndex));//require one page scroll paginator
 });
