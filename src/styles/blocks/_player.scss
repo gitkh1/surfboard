@@ -264,48 +264,6 @@
         }
     }
 
-    /**&__scale {
-        width: rem(60px);
-        position: relative;
-        cursor: pointer;
-
-        &-before {
-            height: rem(4px);
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 0;
-            background: yellow;
-            display: block;
-            transform: translateY(-50%);
-        }
-
-        &-after {
-            height: rem(4px);
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 100%;
-            background: #626262;
-            display: block;
-            transform: translateY(-50%);
-        }
-
-        &-button {
-            background: yellow;
-            border-radius: 50%;
-            border: none;
-            width: rem(12px);
-            height: rem(12px);
-            padding: 0;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            left: 0;
-            z-index: 1;
-        }
-    }**/
-
     &__scale {
         display: flex;
         align-items: center;
